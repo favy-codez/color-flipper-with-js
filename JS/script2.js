@@ -11,11 +11,14 @@ btn.addEventListener('click', function(){
     // run the loop until i<6 which means 0-5 which means 6 times; i++ increment by 1
     for(let i=0; i<6; i++){
         // for each iteration add a value from my array, target the array- hex and target the first array number
-        hexColor += hex[0]
+        hexColor += hex[getRandomNumber()]
     }
     // we want to target the body 
     color.textContent = hexColor;
     document.body.style.backgroundColor = hexColor;
 })
 
-// we want to set up a fxn that generates a random number
+// we want to set up a fxn that generates a random number 
+function getRandomNumber(){
+    return Math.floor(Math.random() * hex.length)
+}
