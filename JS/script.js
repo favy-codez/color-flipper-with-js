@@ -3,8 +3,10 @@ const btn = document.getElementById("btn");
 const color = document.querySelector(".color");
 
 btn.addEventListener('click', function(){
+    // we want to equate the variable to our fxn getRandomNumber
     const randomNumber = getRandomNumber();
     console.log(randomNumber);
+    // we want to target the body and access the style and change background color
     document.body.style.backgroundColor = colors[randomNumber];
     color.textContent = colors[randomNumber];
 })
